@@ -1,8 +1,10 @@
 <div [ngClass]="setClasses()">
   <ul>
     <li>
-      <input (change)="onToggle(todo)" type="checkbox" />
-      {{ todo.title }}
+      <input (change)="onToggle(todo)" type="checkbox" id="{{ todo.id }}" />
+      <label for="{{ todo.id }}">
+        {{ todo.title }}
+      </label>
       <button (click)="onDelete(todo)" class="del">x</button>
     </li>
   </ul>
